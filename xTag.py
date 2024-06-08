@@ -8,8 +8,7 @@ def generate_a_tag(href, anchor_text):
     a_tag = f'<a href="{href}">{anchor_text}</a>'
     return a_tag
 
-def generate_tags():
-    choice = input("Enter '1' for img tag or '2' for a tag: ")
+def generate_tags(choice):
     if choice == '1':
         img_src = input("Enter the image URL: ")
         img_alt = input("Enter the alt text for the image: ")
@@ -36,10 +35,8 @@ def main():
 
         choice = input("Enter your choice: ")
 
-        if choice == '1':
-            generate_tags()
-        elif choice == '2':
-            generate_tags()
+        if choice == '1' or choice == '2':
+            generate_tags(choice)
         elif choice == '3':
             break
         else:
